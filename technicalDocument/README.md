@@ -1,4 +1,7 @@
 ###### This project is created to complete the **Free Code Camp** task `Responsive Web Design Projects - Build a Technical Documentation Page` 
+### Project Concept
+The idea of this project is to create a technical documentation page on a Theme. I chose here the theme of `ECMA6 Features`. The idea is,
+describing popular features of `ECMA6`. There will be a sidebar containing link for each topic discussed. Clicking these links corresponding topic will come to the foreground. Ex: by clicking "let and const", the section with header "JavaScript let and const" will be opened.  
 `technicalDocumentation.html` : This file contains the html specifications  
 `main.css` : This file contains corresponding CSS declarartions
 - The project follows HTML5 standards. Every `section` element is maintained with its corresponding `header`  
