@@ -1,0 +1,141 @@
+strong{
+	color: red;
+}
+#content{
+	display:grid;
+ 	grid-template-columns : 25vw auto;
+}
+#navbar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width:25vw;
+  background:#ffeecc;
+  height: 100%;
+  border-right: solid;
+  border-color: rgba(0, 22, 22, 0.4);
+  overflow-y: auto;
+  
+}
+
+#navbar header{
+	box-sizing: border-box;
+	text-align: center;
+	padding-top:20px;
+	height: 15%;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 30px;
+	box-shadow: inset 0 2em 3em -1em #66cc66;
+}
+
+#navbar ul{
+	list-style: none;
+	padding-inline-start:0 ;
+
+
+}
+
+#navbar li{
+    box-sizing: border-box;
+	width : 100%;
+	height:10%;
+	border-bottom: solid;
+    border-color: rgba(0, 22, 22, 0.4);
+    text-align: center;
+    padding-top:20px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
+    
+}
+
+
+
+
+#main-doc{
+  grid-column-start: 2;
+}
+
+header{
+	font-family: "Times New Roman", Times, serif;
+	font-size: 28px;
+	font-weight: bold;
+	color : #663300;
+}
+
+.sub-section-header{
+	font-size: 20px;
+	color : #004d00;
+}
+
+.demo{
+	background: #f2f2f2;
+	/*width:70%;*/
+	height:auto;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	margin-bottom: 10px;
+}
+
+.demo-header{
+	box-sizing: border-box;
+	height : 35px;
+	text-align:left;
+	background: #ffb366;
+	font-family: "Times New Roman", Times, serif;
+	padding-top:6px;
+	padding-left: 4px;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+
+}
+
+code{
+	font-family: monospace;
+	display: block;
+	position: relative;
+	white-space: pre-line;
+   	padding:10px;
+   	padding-top: 0;
+ }
+
+ #reference_links{
+ 	width:50%;
+ 	border : 1px solid rgba(0, 22, 22, 0.4);
+ 	margin-top:10px;
+ 	margin-bottom: 50px;
+ }
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  #navbar ul {
+    height: 207px;
+  }
+
+  #navbar {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 350px;
+    border: none;
+    z-index: 1;
+    border: 1px solid;
+  }
+
+  #navbar header{
+	box-sizing: border-box;
+	text-align: center;
+	font-family: "Times New Roman", Times, serif;
+	box-shadow: inset 0 2em 3em -1em #66cc66;
+	font-size: 1em;
+	padding-bottom: 25px;
+}
+
+  #main-doc {
+    
+    margin-top: 220px;
+    grid-column-start: span 2;
+  }
+}

@@ -1,0 +1,268 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="main.css">
+	</head>
+	<body>
+			<nav id="navbar">
+				<header>ECMA6 Features</header>
+				<ul id="mainMenu">
+					<li><a class="nav-link" href="#What_is_ECMA6">What is ECMA6 ?</a></li>
+					<li><a class="nav-link" href="New_feautures_of_ECMA6">New feautures of ECMA6</a></li>
+					<li><a class="nav-link" href="#JavaScript_let_and_const">let and const</a></li>
+					<li><a class="nav-link" href="#Arrows">Arrows</a></li>
+					<li><a class="nav-link" href="#Classes">Classes</a></li>
+					<li><a class="nav-link" href="#Template_Strings">Template Strings</a></li>
+					<li><a class="nav-link" href="#Default_Parameter">Default parameter</a></li>
+					<li><a class="nav-link" href="#Rest_and_Spread_Operators">Rest and Spread Operators</a></li>
+					<li><a class="nav-link" href="#Exponentiation_Operator">Exponentiation Operator</a></li>
+					<li><a class="nav-link" href="#Reference">Reference</a></li>
+				</ul>
+				
+			</nav>
+			<main id="content">
+			<article id="main-doc">
+				<section id="What_is_ECMA6" class="main-section">
+					<header>What is ECMA6 ?</header>
+					<p>
+						ECMAScript is the scripting language standardized by Ecma International in the ECMA-262 specification and ISO/IEC 16262. The language is widely used for client-side scripting on the web, in the form of several well-known dialects such as JavaScript, JScript and ActionScript.
+					</p>
+					<p>
+						Netscape delivered JavaScript to Ecma International for standardization and the work on the specification, ECMA-262, began in November 1996. The first edition of ECMA-262 was adopted by the Ecma General Assembly of June 1997. Several editions of the language standard have been published since then.<br/>
+						ECMAScript is the name of the scripting language standardized in ECMA-262. The name "ECMAScript" was a compromise between the organizations involved in standardizing the language, especially Netscape and Microsoft, whose disputes dominated the early standards sessions. Brendan Eich, the creator of JavaScript, commented that "ECMAScript was always an unwanted trade name that sounds like a skin disease." While both JavaScript and JScript aim to be compatible with ECMAScript, they also provide additional features not described in the ECMA specifications
+					</p>
+					<p>
+						ECMAScript6 is just a new version of ECMAScript. ECMAScript 6 is also known as ES6 and ECMAScript 2015. Some people call it JavaScript 6.
+					</p>
+				</section>
+				<section id="New_feautures_of_ECMA6" class="main-section">
+					<header>
+						New feautures of ECMA6
+					</header>
+					    <p>Let us see some of the new features of ES6 at a glance.</p>
+					    <ul>
+					    	<li>let and const</li>
+					    	<li>Arrows</li>
+					    	<li>Classes</li>
+					    	<li>Template Strings</li>
+					    	<li>Default Parameter</li>
+					    	<li>Rest and Spread Operators</li>
+					    </ul>
+				</section>
+				<section id="JavaScript_let_and_const" class="main-section">
+					<header>JavaScript let and const</header>
+					<p>
+						In Javascript one can define variables using the keywords var, let or const.Before ECMA6 "var" was the only option.
+						However, var is “function scoped”.
+						Whereas, the let and const statement allows you to declare a variable with a block scope {}.
+					</p>
+					<section class="sub-section">
+						<header class="sub-section-header">The Let statement</header>
+						<p>The let statement allows you to declare a variable with block scope.</p>
+						<div class="demo">
+							<div class="demo-header">Example - Let Statement</div>
+							<code>
+							var x = 10;
+							// Here x is 10
+							{
+								let x = 2;
+								// Here x is 2
+							}
+							// Here x is 10
+							</code>
+					</div>
+					</section>
+					<section class="sub-section">
+						<header class="sub-section-header">The Const statement
+						</header>
+						<p>
+							Constants are block-scoped, much like variables defined using the let keyword. The value of a constant can't be changed through reassignment, and it can't be redeclared.
+						</p>
+						<div class="demo">
+							<div class="demo-header">Example - Const Statement</div>
+							<code>
+							const number = 42;
+
+							try {
+							  number = 99;
+							} catch (err) {
+							  console.log(err);
+							  // expected output: TypeError: invalid assignment to const `number'
+							  // Note - error messages will vary depending on browser
+							}
+
+							console.log(number);
+							// expected output: 42
+						   </code>
+						</div>
+					</section>
+
+					
+				</section>
+				<section id="Arrows" class="main-section">
+					<header>Arrows</header>
+					<p>
+						Arrows are a function shorthand using the => syntax. They are syntactically similar to the related feature in C#, Java 8 and CoffeeScript. They support both statement block bodies as well as expression bodies which return the value of the expression. Unlike functions, arrows share the same lexical this as their surrounding code.
+					</p>
+					<div class="demo">
+						<div class="demo-header">Example - Arrows</div>
+						<div class="demo-body">
+							<code>
+						const materials = [
+											  'Hydrogen',
+											  'Helium',
+											  'Lithium',
+											  'Beryllium'
+											];
+
+											console.log(materials.map(material => material.length));
+											// expected output: Array [8, 6, 7, 9]
+							</code>
+						</div>
+					</div>
+				</section>
+				<section id="Classes" class="main-section">
+					<header>Classes</header>
+					<p>
+						JavaScript classes, introduced in ECMAScript 2015, are primarily syntactical sugar over JavaScript's existing prototype-based inheritance. The class syntax does not introduce a new object-oriented inheritance model to JavaScript.
+					</p>
+					<p>
+						A class is a type of function, but instead of using the keyword function to initiate it, we use the keyword class, and the properties are assigned inside a constructor() method.
+						Use the keyword class to create a class, and always add a constructor method.
+						The constructor method is called each time the class object is initialized.
+					</p>
+					<div class="demo">
+						<div class="demo-header">Example - Classes</div>
+						<code>
+						class Car {
+						  constructor(brand) {
+						    this.carname = brand;
+						  }
+						}
+						mycar = new Car("Ford");
+					</code>
+					</div>
+				</section>
+				<section id="Template_Strings" class="main-section">
+					<header>Template Strings</header>
+					<p>
+						Template strings provide syntactic sugar for constructing strings. This is similar to string interpolation features in Perl, Python and more. Optionally, a tag can be added to allow the string construction to be customized, avoiding injection attacks or constructing higher level data structures from string contents.
+					</p>
+					<div class="demo">
+						<div class="demo-header">Example - Template Strings</div>
+						<code>
+						/ Basic literal string creation
+						`In JavaScript '\n' is a line-feed.`
+
+						// Multiline strings
+						`In JavaScript this is
+						 not legal.`
+
+						// String interpolation
+						var name = "Bob", time = "today";
+						`Hello ${name}, how are you ${time}?`
+
+						// Construct an HTTP request prefix is used to interpret the replacements and construction
+						POST`http://foo.org/bar?a=${a}&b=${b}
+						     Content-Type: application/json
+						     X-Credentials: ${credentials}
+						     { "foo": ${foo},
+						       "bar": ${bar}}`(myOnReadyStateChangeHandler);
+						 </code>
+					</div>
+				</section>
+				<section id="Default_Parameter" class="main-section">
+					<header>Default Parameter</header>
+					<p>Default function parameters allow named parameters to be initialized with default values if no value or undefined is passed.
+					</p>
+					<div class="demo">
+						<div class="demo-header">Example - Default Parameter</div>
+						<code>
+						function multiply(a, b = 1) {
+						  return a * b;
+						}
+
+						console.log(multiply(5, 2));
+						// expected output: 10
+
+						console.log(multiply(5));
+						// expected output: 5
+					   </code>
+					</div>
+				</section>
+				<section id="Rest_and_Spread_Operators" class="main-section">
+					<header>Rest and Spread Operators</header>
+					<p>The features of ECMA6 adds another one; <strong>...</strong> is one of these new functionalities. It can be used in two different ways; as a spread operator OR as a rest parameter.</p>
+					<section class="sub-section">
+						<header class="sub-section-header">Rest parameter</header>
+						<p>The rest parameter syntax allows us to represent an indefinite number of arguments as an array.</p>
+						<div class="demo">
+							<div class="demo-header">Example - Rest parameter</div>
+							<code>
+							function sum(...theArgs) {
+							  return theArgs.reduce((previous, current) => {
+							    return previous + current;
+							  });
+							}
+
+							console.log(sum(1, 2, 3));
+							// expected output: 6
+
+							console.log(sum(1, 2, 3, 4));
+							// expected output: 10
+						</code>
+						</div>
+					</section>
+					<section class="sub-section">
+						<header class="sub-section-header">Spread operator</header>
+						<p>
+							Spread syntax allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.
+						</p>
+						<div class="demo">
+							<div class="demo-header">Example - Spread Operator</div>
+							<code>
+							function sum(x, y, z) {
+							  return x + y + z;
+							}
+
+							const numbers = [1, 2, 3];
+
+							console.log(sum(...numbers));
+							// expected output: 6
+
+							console.log(sum.apply(null, numbers));
+							// expected output: 6
+						   </code>
+						</div>
+					</section>
+				</section>
+				<section id="Exponentiation_Operator" class="main-section">
+					<header>Exponentiation Operator</header>
+					<p>The exponentiation operator (**) raises the first operand to the power of the second operand.</p>
+					<div class="demo">
+						<div class="demo-header">Example - Exponentiation Operator</div>
+						<code>
+						var x = 5;
+						var z = x ** 2;          // result is 25
+						x ** y produces the same result as Math.pow(x,y):
+						var x = 5;
+						var z = Math.pow(x,2);   // result is 25
+						</code>
+					</div>
+				</section>
+				<section id="Reference" class="main-section">
+					<header>Reference</header>
+					This Section defines all the reference that were used to get the information for this page.
+					<div id="reference_links">
+						<ul>
+							<li><a href="https://en.wikipedia.org/wiki/ECMAScript">Wikipedia</a></li>
+							<li><a href="https://github.com/lukehoban/es6features">Github</a></li>
+							<li><a href="https://developer.mozilla.org/en-US/">MDN</a></li>
+						</ul>
+					</div>
+				</section>
+
+    		</article>
+		</main>
+
+	</body>
+</html>
