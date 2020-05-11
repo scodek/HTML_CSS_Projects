@@ -8,6 +8,7 @@ paper quiling. They say :
 > As our art-work were praised widely and got chances to represent us in nationwide exhibitions, we this time took it one step further by opening our personal outlet.
 > In our outlet we are selling tools, paper-strips and other materials for paper quiling. We also offer online courses to learn quiling.
 > With the completion of three levels of our online courses you can achieve certificated from our partnering accreditation institution of quiling.
+### Technical Overview
 - Bootstrap framework is used to style this project
 - I specially learned here how to position `background-image` with `linear-gradient` functionality
 - Learned to use `z-index` property
